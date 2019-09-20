@@ -7,13 +7,14 @@ jvm有很多，不只是Hotspot，还有JRockit、J9等等。
 * 类加载子系统
 * 运行时数据区（内存结构）
 * 执行引擎
-![001](D:\文档位\Typora\001.png)
+![](001.png)
 ### 2. 运行时数据区（内存结构）
 #### 2.1 方法区（Method Area）
 类的所有字段和方法字节码，以及一些特殊方法如构造函数，接口代码也在这里定义。简单来说，所有定义的方法的信息都保存在该区域，静态变量+常量+类信息（构造方法/接口定义）+运行时常量池都存在方法区中，虽然Java虚拟机规范把方法区描述为堆的一个逻辑部分，但是它却有一个别名叫做Non-Heap（非堆），目的应该是为了和Java的堆区分开。
 #### 2.2 堆（Heap）
 虚拟机启动时自动分配创建，用于存放对象的实例，几乎所有对象都在堆上分配内存，当对象无法在该空间申请到内存是将抛出OutOfMemoryError异常。同时也是垃圾收集器管理的主要区域。
-![002](D:\文档位\Typora\002.png)
+![]()
+
 ##### 2.2.1 新生代（Young Generation）
 类出生、成长、消亡的区域，一个类在这里产生，应用，最后被垃圾回收器收集，结束生命。
 新生代分为两部分：伊甸区（Eden space）和幸存者区（Survivor space），所有的类都是在伊甸区被new出来的。幸存区又分为From和To区。当Eden区的空间用完是，程序又需要创建对象，JVM的垃圾回收器将Eden区进行垃圾回收（Minor GC），将Eden区中的不再被其它对象应用的对象进行销毁。然后将Eden区中剩余的对象移到From Survivor区。若From Survivor区也满了，再对该区进行垃圾回收，然后移动到To Survivor区。
@@ -56,3 +57,26 @@ jinfo -sysprops 1768
 
 ## 六、调优
 
+```java
+public static void main(String[] args){
+	System.out.println("Hello World!");
+}
+```
+```html
+<script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+<script src="//unpkg.com/prismjs/components/prism-php.js"></script>
+```
+```css
+#features li strong,
+header h2,
+footer p {
+    font: 100% Rockwell, Arvo, serif;
+}
+```
+```php
+<?php 
+$connec=mysql_connect("localhost","root","root") or die("不能连接数据库服务器： ".mysql_error()); 
+mysql_select_db("liuyanben",$connec) or die ("不能选择数据库: ".mysql_error()); 
+mysql_query("set names 'gbk'"); 
+?>
+```

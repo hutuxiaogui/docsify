@@ -1,4 +1,6 @@
-* [首页](zh-cn/)
-* [指南](zh-cn/guide)
+* [首页](/)
+* [指南](guide)
+* [中文首页](zh-cn/)
+* [中文指南](zh-cn/guide)
 * [Docker](zh-cn/常用的Docker命令)
 * [JVM底层原理](zh-cn/JVM底层原理)
