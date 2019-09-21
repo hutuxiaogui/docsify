@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-</head>
-<body>
-	<div id="app"></div>
-	<script>
-    window.$docsify = {
-      name: '',
-      repo: ''
-    }
-	</script>
-	<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-	<script>
-		window.$docsify = {
-			coverpage: true,
-			// 自定义文件名
-		    coverpage: 'cover.md',
-		
-		    // mutiple covers
-		    coverpage: ['/'],
-		
-		    // mutiple covers and custom file name
-		    coverpage: {
-				'/': 'cover.md',
+	<head>
+		<meta charset="UTF-8">
+		<title>Java文档</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta name="description" content="Description">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+		<style type="text/css">
+			.app-sub-sidebar li:before {
+			    content: "";
+			    padding-right: 4px;
+			    float: left;
+		</style>
+	</head>
+	<body>
+		<div id="app"></div>
+		<script>
+			window.$docsify = {
+				name: 'Java文档',
+				repo: 'https://github.com/hutuxiaogui/docsify'
+			};
+		</script>
+		<script>
+			window.$docsify = {
+				coverpage: true,
+				// 自定义文件名
+				coverpage: 'cover.md',
+
+				// mutiple covers
+				coverpage: ['/'],
+
+				// mutiple covers and custom file name
+				coverpage: {
+					'/': 'cover.md',
+				}
+			};
+		</script>
+		<script>
+			window.$docsify = {
+				loadSidebar: true,
+				autoHeader: true,
+				maxLevel: 3,
+				auto2top: true,
+				subMaxLevel: 4,
+				routerMode: 'history',
+				ga: 'UA-148350209-1',
 			}
-		};
-	</script>
-	<script>
-		window.$docsify = {
-			loadNavbar: true
-		}
-	</script>
-	<script>
-		window.$docsify = {
-			loadSidebar: true
-		}
-	</script>
-	<script>
-		window.$docsify = {
-			loadSidebar: true,
-			subMaxLevel: 4
-		}
-	</script>
-	<script>
-		window.$docsify = {
-		  repo: 'https://github.com/hutuxiaogui/docsify/'
-		};
-	</script>
-	<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-	<script src="//unpkg.com/docsify/lib/plugins/ga.js"></script>
-	<script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
-	<script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
-	<script src="//unpkg.com/docsify-copy-code"></script>
-	<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>		
-	<script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
-	<script src="//unpkg.com/prismjs/components/prism-php.js"></script>
-	<script src="//unpkg.com/prismjs/components/prism-java.js"></script>
-	<script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
-	<script src="//github.com/PrismJS/prism/blob/gh-pages/components/prism-java.min.js"></script>
-	
-</body>
+		</script>
+		<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+		<!--全文搜索-->
+		<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+		<script src="//unpkg.com/docsify/lib/plugins/ga.js"></script>
+		<script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+		<script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+		<script src="//unpkg.com/docsify-copy-code"></script>
+		<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+		<!--Java代码高亮-->
+		<script src="//unpkg.com/prismjs/components/prism-bash.js"></script>
+		<script src="//unpkg.com/prismjs/components/prism-php.js"></script>
+		<script src="//unpkg.com/prismjs/components/prism-java.js"></script>
+		<script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
+		<!--谷歌统计-->
+		<script src="//unpkg.com/docsify/lib/plugins/ga.js"></script>
+	</body>
 </html>
