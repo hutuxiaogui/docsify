@@ -1,4 +1,4 @@
-<img src="_media/bg.png" alt="java" title="java" />
+<img src="media/bg.png" alt="java" title="java" />
 > java
 - 111111111
 - 222222222
