@@ -9,18 +9,28 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
 <body>
-  <div id="app"></div>
-  <script>
+	<div id="app"></div>
+	<script>
     window.$docsify = {
       name: '',
       repo: ''
     }
-  </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+	</script>
+	<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 	<script>
 		window.$docsify = {
-			coverpage: true
-		}
+			coverpage: true,
+			// 自定义文件名
+		    coverpage: 'cover.md',
+		
+		    // mutiple covers
+		    coverpage: ['/'],
+		
+		    // mutiple covers and custom file name
+		    coverpage: {
+				'/': 'cover.md',
+			}
+		};
 	</script>
 	<script>
 		window.$docsify = {
@@ -31,13 +41,18 @@
 		window.$docsify = {
 			loadSidebar: true
 		}
-  </script>
-  <script>
+	</script>
+	<script>
 		window.$docsify = {
 			loadSidebar: true,
 			subMaxLevel: 4
 		}
-  </script>
+	</script>
+	<script>
+		window.$docsify = {
+		  repo: 'https://github.com/hutuxiaogui/docsify/'
+		};
+	</script>
 	<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 	<script src="//unpkg.com/docsify/lib/plugins/ga.js"></script>
 	<script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
