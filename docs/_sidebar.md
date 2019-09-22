@@ -1,6 +1,6 @@
 * [首页](/)
-* [JavaSE](/guide)
-* [JavaEE](/guide)
+* [JavaSE](/JavaSE)
+* [JavaEE](/JavaEE)
 * [Spring](/guide)
 * [SpringMVC](/guide)
 * [Springboot](/guide)
