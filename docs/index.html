@@ -7,6 +7,15 @@
 		<meta name="description" content="Description">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+		<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+		
+		
+		<style>
+		    nav.app-nav li ul {
+		      min-width: 100px;
+		    }
+		 </style>
+		
 		<style type="text/css">
 			.app-sub-sidebar li:before {
 			    content: "";
@@ -16,6 +25,8 @@
 	</head>
 	<body>
 		<div id="app"></div>
+		
+		<script src="//unpkg.com/docsify-plugin-codefund/index.js"></script>
 		
 		<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
 		
@@ -33,7 +44,6 @@
 		<script src="//unpkg.com/prismjs/components/prism-sql.js"></script>
 		<!--谷歌统计-->
 		<script src="//unpkg.com/docsify/lib/plugins/ga.js"></script>
-
 		
 		<script>
 			window.$docsify = {
@@ -42,13 +52,44 @@
 				homepage: 'home.md',
 				name: 'Java文档',
 				coverpage: true,
+				executeScript: true,
 				loadSidebar: true,
 				autoHeader: true,
+				mergeNavbar: true,
 				subMaxLevel: 4,
 				maxLevel: 3,
 				auto2top: true,				
 				ga: 'UA-148350209-1',
+				search: 'auto',
+				search: {
+				        noData: {
+				          '/de-de/': 'Keine Ergebnisse!',
+				          '/zh-cn/': '没有结果!',
+				          '/': 'No results!'
+				        },
+				        paths: 'auto',
+				        placeholder: {
+				          '/de-de/': 'Suche',
+				          '/zh-cn/': '搜索',
+				          '/': 'Search'
+				        }
+				      },
+				formatUpdated: '{MM}/{DD} {HH}:{mm}',
 			}
-		</script>		
-	</body>
+		</script>
+		<!--Gitalk评论系统-->				
+		<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+		<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+		<script>
+		  const gitalk = new Gitalk({
+			clientID: '434d1bf6e728e1a966df',
+			clientSecret: 3ba8dc3c0f7d8176d2f8bc274c7fa2dff517dc7f',
+			repo: 'https://github.com/hutuxiaogui/docsify',
+			owner: 'hutuxiaogui',
+			admin: ['hutuxiaogui'],
+			// facebook-like distraction free mode
+			distractionFreeMode: false,
+		  })
+		</script>
+</body>
 </html>
