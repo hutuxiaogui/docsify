@@ -7,7 +7,8 @@
 		<meta name="description" content="Description">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 		<link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-		
+		<!--Gitalk评论系统-->
+		<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
 		
 		<style type="text/css">
 			.app-sub-sidebar li:before {
@@ -18,21 +19,6 @@
 	</head>
 	<body>
 		<div id="app"></div>
-		<!--Gitalk评论系统-->
-		<link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-		<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
-		<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-		<script>
-		  const gitalk = new Gitalk({
-			clientID: '434d1bf6e728e1a966df',
-			clientSecret: 3ba8dc3c0f7d8176d2f8bc274c7fa2dff517dc7f',
-			repo: 'https://github.com/hutuxiaogui/docsify',
-			owner: 'hutuxiaogui',
-			admin: ['hutuxiaogui'],
-			// facebook-like distraction free mode
-			distractionFreeMode: false
-		  })
-		</script>
 		<script>
 			window.$docsify = {
 				el: '#app',
@@ -61,8 +47,21 @@
 				          '/zh-cn/': '搜索',
 				          '/': 'Search'
 				        }
-				      },
+				},
 			}
+		</script>
+		<!--Gitalk评论系统-->
+		<script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+		<script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+		<script>
+			const gitalk = new Gitalk({
+				clientID: '434d1bf6e728e1a966df',
+				clientSecret: 3ba8dc3c0f7d8176d2f8bc274c7fa2dff517dc7f',
+				repo: 'docsify',
+				owner: 'hutuxiaogui',
+				admin: ['hutuxiaogui'],
+				distractionFreeMode: false
+			})
 		</script>
 		
 		<script src="//unpkg.com/docsify-plugin-codefund/index.js"></script>
@@ -71,9 +70,11 @@
 		
 		<!--全文搜索-->
 		<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-		
+		<!--emoji 解析-->
 		<script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+		<!--图片缩放-->
 		<script src="//unpkg.com/docsify/lib/plugins/zoom-image.js"></script>
+		<!--代码复制到剪贴板-->
 		<script src="//unpkg.com/docsify-copy-code"></script>
 		<!--分页导航-->
 		<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
